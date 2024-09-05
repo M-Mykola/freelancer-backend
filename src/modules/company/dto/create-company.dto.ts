@@ -5,5 +5,5 @@ import { ICompany } from "../interface/company.interface";
 export class CreateCompanyDto {
   @ApiProperty()
   @IsString()
-  companyName: string;
+  name: string;
 }

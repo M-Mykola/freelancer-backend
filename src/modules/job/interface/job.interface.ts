@@ -1,5 +1,5 @@
 export interface IJob {
-  jobName: string;
-  jobDescription: string;
+  name: string;
+  description: string;
   company: number;
 }

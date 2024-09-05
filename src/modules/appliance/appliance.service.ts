@@ -56,7 +56,7 @@ export class ApplianceService {
     const emailResponse = await this.emailService.sendEmail(
       dto.userEmail,
       `New application from "${dto.userName}"`,
-      { jobName: job.jobName, from: dto.userEmail }
+      { name: job.name, from: dto.userEmail }
     );
 
     return { saveAppliance, emailResponse };

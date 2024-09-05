@@ -14,12 +14,12 @@ export class Job {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Unique(["jobName"])
+  @Unique(["name"])
   @Column()
-  jobName: string;
+  name: string;
 
   @Column()
-  jobDescription: string;
+  description: string;
 
   @ManyToOne(() => Company, (company) => company.jobs, { onDelete: 'CASCADE' })
   company: number; 

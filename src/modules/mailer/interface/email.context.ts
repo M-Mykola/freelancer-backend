@@ -1,4 +1,4 @@
 interface IEmailContext {
-    jobName: string;
+    name: string;
     from: string;
   }

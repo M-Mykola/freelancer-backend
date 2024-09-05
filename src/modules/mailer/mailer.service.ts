@@ -11,7 +11,7 @@ export class EmailService {
         to,
         subject,
         html: `<p>Hello,</p>
-               <p>Your application for the job "${context.jobName}" from user "${context.from}" has been received.</p>
+               <p>Your application for the job "${context.name}" from user "${context.from}" has been received.</p>
                <p>Thank you!</p>`,
       });
     } catch (error) {

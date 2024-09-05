@@ -13,9 +13,9 @@ export class Company implements ICompany {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Unique(["companyName"])
+  @Unique(["name"])
   @Column()
-  companyName: string;
+  name: string;
 
   @OneToMany(() => Job, (job) => job.company, { cascade: true })
   jobs: Job[];

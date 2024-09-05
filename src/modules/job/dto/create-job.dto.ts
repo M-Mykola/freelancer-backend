@@ -6,14 +6,14 @@ export class CreateJobDto implements IJob {
   @ApiProperty({ default: "Software Developer" })
   @IsNotEmpty()
   @IsString()
-  jobName: string;
+  name: string;
 
   @ApiProperty({ default: "Some description" })
   @IsNotEmpty()
   @IsString()
-  jobDescription: string;
+  description: string;
 
-  @ApiProperty({ default: "Some name" })
+  @ApiProperty({ default: 1 })
   @IsNotEmpty()
   @IsInt()
   company: number;

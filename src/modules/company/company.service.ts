@@ -24,7 +24,7 @@ export class CompanyService {
 
   async create(dto: CreateCompanyDto): Promise<ICompany | undefined> {
     const companyExist = await this.companyRepo.findOneBy({
-      companyName: dto.companyName,
+      name: dto.name,
     });
 
     if (companyExist) {
