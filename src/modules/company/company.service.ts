@@ -43,7 +43,7 @@ export class CompanyService {
     id: number,
     updateCompanyDto: UpdateCompanyDto
   ): Promise<Company> {
-    const company = await this.companyRepo.findOneBy({ id: id });
+    const company = await this.companyRepo.findOneBy({ id });
     if (!company) {
       throw new BadRequestException("Company not found");
     }

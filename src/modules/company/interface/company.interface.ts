@@ -1,4 +1,7 @@
+import { IJob } from "src/modules/job/interface/job.interface";
+
 export interface ICompany {
-    companyName: string;
-  }
-  
+  id: number;
+  companyName: string;
+  jobs?: IJob[]
+}

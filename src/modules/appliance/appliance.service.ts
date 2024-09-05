@@ -39,12 +39,11 @@ export class ApplianceService {
       throw new BadRequestException("User has already applied for this job");
     }
 
-    let createdApplication: Appliance;
-    try {
-      createdApplication = await this.applianceRepo.save(dto);
-    } catch (error) {
+    const createdApplication = await this.applianceRepo.save(dto);
+    if (!createdApplication) {
       throw new BadRequestException("Failed to save the application");
     }
+
     const saveAppliance = await this.applianceRepo.findOne({
       where: { id: createdApplication.id },
       relations: ["job"],

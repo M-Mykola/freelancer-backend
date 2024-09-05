@@ -1,7 +1,8 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsInt, IsNotEmpty, IsString, Length } from "class-validator";
+import { IJob } from "../interface/job.interface";
 
-export class CreateJobDto {
+export class CreateJobDto implements IJob {
   @ApiProperty({ default: "Software Developer" })
   @IsNotEmpty()
   @IsString()

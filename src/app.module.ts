@@ -22,7 +22,6 @@ import { DATABASE_HOST, DATABASE_PASSWORD, DATABASE_PORT_NUMBER, DATABASE_USER }
       autoLoadEntities: true,
       database: "postgres",
       synchronize: true,
-      logging: true,
     }),
     TypeOrmModule.forFeature([Job, Appliance]),
     JobModule,
