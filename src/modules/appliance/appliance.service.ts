@@ -1,5 +1,4 @@
 import {
-  BadGatewayException,
   BadRequestException,
   Inject,
   Injectable,
@@ -7,7 +6,6 @@ import {
   forwardRef,
 } from "@nestjs/common";
 import { CreateApplianceDto } from "./dto/create-appliance.dto";
-import { UpdateApplicantDto } from "./dto/update-appliance.dto";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Appliance } from "./entities/appliance.entity";
 import { Repository } from "typeorm";
@@ -36,7 +34,7 @@ export class ApplianceService {
     });
 
     if (existingApplication) {
-      throw new BadRequestException("User has already applied for this job");
+      throw new BadRequestException("User has already applied for this job")
     }
 
     const createdApplication = await this.applianceRepo.save(dto);

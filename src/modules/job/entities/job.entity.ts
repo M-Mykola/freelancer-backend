@@ -10,11 +10,11 @@ import {
 } from "typeorm";
 
 @Entity()
+@Unique(['name', 'company'])
 export class Job {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Unique(["name"])
   @Column()
   name: string;
 
